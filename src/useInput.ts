@@ -13,11 +13,11 @@ type AccessibleInputReturn = [
   }
 ];
 
-const useAccessibleInput = ({ label, name, required }: AccessibleInputArguments): AccessibleInputReturn  => [{
-  'aria-label': label,
-  'aria-required': required ||  false,
+const useAccessibleInput = (input: AccessibleInputArguments): AccessibleInputReturn  => [{
+  'aria-label': (input || {}).label,
+  'aria-required': (input || {}).required ||  false,
 }, {
-  htmlFor: name,
+  htmlFor: (input || {}).name,
 }];
 
 export default useAccessibleInput;
