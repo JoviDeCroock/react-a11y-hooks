@@ -1,0 +1,62 @@
+{
+  "name": "react-a11y-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoviDeCroock/react-a11y-hooks.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoviDeCroock/react-a11y-hooks/issues"
+  },
+  "homepage": "https://github.com/JoviDeCroock/react-a11y-hooks#readme",
+  "sideEffects": false,
+  "scripts": {
+    "build": "rimraf dist && yarn build:uncompressed && yarn build:minified && yarn cleanup",
+    "build:minified": "microbundle --jsx React.createElement --external react --define process.env.NODE_ENV=production --name reactAccessibilityHooks --output dist/prod",
+    "build:uncompressed": "microbundle --jsx React.createElement --external react --no-compress --name reactAccessibilityHooks --output dist/",
+    "cleanup": "rimraf .rpt2_cache && rimraf .rts2_cache_cjs && rimraf .rts2_cache_umd && rimraf .rts2_cache_es",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env npm run test -- --watch",
+    "prepublishOnly": "npm run test && npm run build",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "keywords": [],
+  "main": "dist/temp.js",
+  "browser": "dist/temp.umd.js",
+  "umd:main": "dist/temp.umd.js",
+  "jsnext:main": "dist/temp.modern.js",
+  "module": "dist/temp.module.js",
+  "source": "src/index.ts",
+  "syntax": {
+    "esmodules": "dist/test.modern.js"
+  },
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "devDependencies": {
+    "@testing-library/react": "9.4.0",
+    "@types/jest": "24.0.23",
+    "@types/react": "16.9.16",
+    "@types/react-dom": "16.9.4",
+    "@typescript-eslint/eslint-plugin": "2.11.0",
+    "@typescript-eslint/parser": "2.11.0",
+    "codecov": "3.6.1",
+    "cross-env": "5.2.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-react": "7.17.0",
+    "husky": "3.1.0",
+    "jest": "24.9.0",
+    "jest-cli": "24.9.0",
+    "lint-staged": "9.5.0",
+    "microbundle": "0.12.0-next.6",
+    "prettier": "1.19.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "rimraf": "2.6.3",
+    "ts-jest": "24.2.0",
+    "tslib": "1.10.0",
+    "typescript": "3.7.3"
+  }
+}
