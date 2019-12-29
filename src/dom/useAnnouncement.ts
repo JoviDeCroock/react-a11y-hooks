@@ -3,8 +3,8 @@ interface AccessibleAnnouncementReturn {
   'aria-atomic': boolean;
 }
 
-const useAccessibleAnnouncement = (): AccessibleAnnouncementReturn  => ({
-  'aria-live': 'polite',
+const useAccessibleAnnouncement = (isPolite: boolean): AccessibleAnnouncementReturn  => ({
+  'aria-live': isPolite ? 'polite' : 'assertive',
   "aria-atomic": true,
 });
 
