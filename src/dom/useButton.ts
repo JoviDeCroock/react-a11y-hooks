@@ -21,3 +21,5 @@ const useButton = (input: Input): Output => {
     value: input.intent,
   }
 }
+
+export default useButton;
