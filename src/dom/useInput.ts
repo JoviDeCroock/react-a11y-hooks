@@ -19,11 +19,13 @@ const useAccessibleInput = (input: AccessibleInputArguments): AccessibleInputRet
   const arg = input || {};
   return [
     {
+      // Input properties
       'aria-label': arg.label,
       'aria-required': !!arg.required,
       'aria-invalid': !!arg.error,
     },
     {
+      // Label properties
       htmlFor: arg.name,
     }
   ]

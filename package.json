@@ -23,11 +23,11 @@
     "lint": "eslint . --ext .ts,.tsx"
   },
   "keywords": [],
-  "main": "dist/temp.js",
-  "browser": "dist/temp.umd.js",
-  "umd:main": "dist/temp.umd.js",
-  "jsnext:main": "dist/temp.modern.js",
-  "module": "dist/temp.module.js",
+  "main": "dist/react-a11y-hooks.js",
+  "browser": "dist/react-a11y-hooks.umd.js",
+  "umd:main": "dist/react-a11y-hooks.umd.js",
+  "jsnext:main": "dist/react-a11y-hooks.modern.js",
+  "module": "dist/react-a11y-hooks.module.js",
   "source": "src/index.ts",
   "syntax": {
     "esmodules": "dist/test.modern.js"
@@ -37,6 +37,7 @@
   "devDependencies": {
     "@testing-library/react": "9.4.0",
     "@types/jest": "24.0.23",
+    "@types/node": "^13.1.1",
     "@types/react": "16.9.16",
     "@types/react-dom": "16.9.4",
     "@typescript-eslint/eslint-plugin": "2.11.0",
@@ -52,8 +53,8 @@
     "lint-staged": "9.5.0",
     "microbundle": "0.12.0-next.6",
     "prettier": "1.19.1",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "rimraf": "2.6.3",
     "ts-jest": "24.2.0",
     "tslib": "1.10.0",

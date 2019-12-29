@@ -8,9 +8,12 @@ type AccessibleListReturn = {
   role: string;
 };
 
-const useAccessibleList = (input: AccessibleListArguments): AccessibleListReturn  => ({
-  'aria-label': (input || {}).label,
-  role: (input || {}).role,
-});
+const useAccessibleList = (input: AccessibleListArguments): AccessibleListReturn  => {
+  const arg = input || {};
+  return {
+    'aria-label': arg.label,
+    role: arg.role,
+  }
+}
 
 export default useAccessibleList;
