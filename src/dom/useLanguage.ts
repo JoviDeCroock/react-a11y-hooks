@@ -1,6 +1,6 @@
 import React from 'react';
 
-const useLanguage = (language: string) => {
+const useLanguage = (language: string): void => {
   React.useEffect(() => {
     const htmlElement = document.getElementsByTagName('html');
     if (htmlElement[0]) {

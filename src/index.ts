@@ -1,4 +1,5 @@
 export { default as useAnnouncement } from './dom/useAnnouncement';
+export { default as useButton } from './dom/useButton';
 export { default as useDescription } from './dom/useDescription';
 export { default as useEnterEvent } from './dom/useEnterEvent';
 export { default as useExitEvent } from './dom/useExitEvent';

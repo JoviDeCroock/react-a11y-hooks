@@ -1,4 +1,4 @@
-const useDescription = (id: string) => ({
+const useDescription = (id: string): { 'aria-describedby': string } => ({
   // TODO: see if described by exists
   'aria-describedby': id,
 });
