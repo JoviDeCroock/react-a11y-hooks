@@ -8,5 +8,7 @@ export { default as useImage } from './dom/useImage';
 export { default as useInput } from './dom/useInput';
 export { default as useLanguage } from './dom/useLanguage';
 export { default as useList } from './dom/useList';
+export { default as useSlider } from './dom/useSlider';
 export { default as useDocumentTitle } from './dom/useTitle';
+export { default as useIsVisible } from './dom/useVisible';
 export { default as useIsOpen } from './state/useIsOpen';

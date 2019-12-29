@@ -1,12 +1,13 @@
 import React from 'react';
 
-const useLanguage = (language: string): void => {
+const useLanguage = (lang: string): { lang: string } => {
   React.useEffect(() => {
     const htmlElement = document.getElementsByTagName('html');
     if (htmlElement[0]) {
-      htmlElement[0].setAttribute('lang', language);
+      htmlElement[0].setAttribute('lang', lang);
     }
-  }, [language]);
+  }, [lang]);
+  return { lang }
 }
 
 export default useLanguage;
