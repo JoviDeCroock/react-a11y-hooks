@@ -20,7 +20,7 @@ const useAccessibleInput = (input: AccessibleInputArguments): AccessibleInputRet
   return [
     {
       'aria-label': arg.label,
-      'aria-required': arg.required ||  false,
+      'aria-required': !!arg.required,
       'aria-invalid': !!arg.error,
     },
     {
