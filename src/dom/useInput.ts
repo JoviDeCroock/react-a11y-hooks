@@ -1,7 +1,7 @@
 interface AccessibleInputArguments {
   error?: string | boolean;
   label: string;
-  name?: string;
+  id?: string;
   required?: boolean;
 };
 
@@ -26,7 +26,7 @@ const useAccessibleInput = (input: AccessibleInputArguments): AccessibleInputRet
     },
     {
       // Label properties
-      htmlFor: arg.name,
+      htmlFor: arg.id,
     }
   ]
 };
