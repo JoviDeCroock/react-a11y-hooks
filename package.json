@@ -36,6 +36,7 @@
   "typings": "dist/index.d.ts",
   "devDependencies": {
     "@testing-library/react": "9.4.0",
+    "@testing-library/react-hooks": "^3.2.1",
     "@types/jest": "24.0.23",
     "@types/node": "^13.1.1",
     "@types/react": "16.9.16",
@@ -55,9 +56,51 @@
     "prettier": "1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
     "rimraf": "2.6.3",
     "ts-jest": "24.2.0",
     "tslib": "1.10.0",
     "typescript": "3.7.3"
+  },
+  "mangle": {
+    "regex": "^_"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/__tests__/setup.js"
+    ],
+    "preset": "ts-jest",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testMatch": [
+      "<rootDir>/__tests__/**/*.(test|spec).ts?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      ".js"
+    ]
   }
 }

@@ -13,13 +13,12 @@ interface Output {
 }
 
 const useButton = (input: Input): Output => {
-  const arg = input || {};
   return {
-    'aria-labelledby': arg.labelledBy,
-    'aria-label': arg.label,
+    'aria-labelledby': input.labelledBy,
+    'aria-label': input.label,
     role: input.type !== 'button' ? 'button' : undefined,
     value: input.intent,
-  }
-}
+  };
+};
 
 export default useButton;
