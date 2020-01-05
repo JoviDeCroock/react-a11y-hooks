@@ -14,7 +14,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "rimraf dist && yarn build:uncompressed && yarn build:minified && yarn cleanup",
-    "build:minified": "microbundle --jsx React.createElement --external react --define process.env.NODE_ENV=production --name reactAccessibilityHooks --output dist/prod",
+    "build:minified": "microbundle --jsx React.createElement --external react --define process.env.NODE_ENV=production --format cjs --name reactAccessibilityHooks --output dist/prod",
     "build:uncompressed": "microbundle --jsx React.createElement --external react --no-compress --name reactAccessibilityHooks --output dist/",
     "cleanup": "rimraf .rpt2_cache && rimraf .rts2_cache_cjs && rimraf .rts2_cache_umd && rimraf .rts2_cache_es",
     "test": "cross-env NODE_ENV=test jest",
@@ -29,9 +29,6 @@
   "jsnext:main": "dist/react-a11y-hooks.modern.js",
   "module": "dist/react-a11y-hooks.module.js",
   "source": "src/index.ts",
-  "syntax": {
-    "esmodules": "dist/test.modern.js"
-  },
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "devDependencies": {
@@ -99,8 +96,7 @@
       "ts",
       "tsx",
       "js",
-      "jsx",
-      ".js"
+      "jsx"
     ]
   }
 }
