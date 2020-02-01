@@ -11,13 +11,11 @@ describe('useButton', () => {
       useButton({
         intent: 'submit',
         label: 'click me',
-        labelledBy: 'myLabel',
         type: 'button',
       })
     );
     expect(result.role).toEqual(undefined);
     expect(result.value).toEqual('submit');
-    expect(result['aria-labelledby']).toEqual('myLabel');
     expect(result['aria-label']).toEqual('click me');
   });
 
@@ -28,13 +26,11 @@ describe('useButton', () => {
       useButton({
         intent: 'reset',
         label: 'click me',
-        labelledBy: 'myLabel',
         type: 'input',
       })
     );
     expect(result.role).toEqual('button');
     expect(result.value).toEqual('reset');
-    expect(result['aria-labelledby']).toEqual('myLabel');
     expect(result['aria-label']).toEqual('click me');
   });
 });
