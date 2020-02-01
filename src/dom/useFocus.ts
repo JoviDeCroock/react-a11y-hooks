@@ -1,12 +1,11 @@
 import React from 'react';
 
 const useFocus = () => {
-  const inputRef = React.useRef();
+  const inputRef = React.useRef<HTMLElement>();
   React.useEffect(() => {
-    // @ts-ignore
     if (inputRef.current) inputRef.current.focus();
   }, []);
   return inputRef;
-}
+};
 
 export default useFocus;
