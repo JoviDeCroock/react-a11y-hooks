@@ -11,4 +11,3 @@ export { default as useList } from './dom/useList';
 export { default as useSlider } from './dom/useSlider';
 export { default as useDocumentTitle } from './dom/useTitle';
 export { default as useIsVisible } from './dom/useVisible';
-export { default as useIsOpen } from './state/useIsOpen';
